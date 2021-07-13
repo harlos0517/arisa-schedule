@@ -51,15 +51,20 @@ let main = new Vue({
 	methods: {
 	},
 	mounted: async function() {
-		const res = await req(
-			'https://spreadsheets.google.com/feeds/cells/18fkT9VS12SyrsvnQ5jAHhVdNIcDtI12i0LSbkRr4XRY/3/public/full?alt=json',
-			'json'
-		)
-		const data = getObjectsFromEntries(res)
-		const newData = data.map(({ title, time }) => ({
-			title,
-			time: Date(24 * 60 * 60 * 1000 * time)
-		}))
+		// Nah this is not automated
+		// reference: https://www.freecodecamp.org/news/cjn-google-sheets-as-json-endpoint/
+		// const res = await req(
+		// 	'https://spreadsheets.google.com/feeds/cells/18fkT9VS12SyrsvnQ5jAHhVdNIcDtI12i0LSbkRr4XRY/3/public/full?alt=json',
+		// 	'json'
+		// )
+		// const data = getObjectsFromEntries(res)
+		// const newData = data.map(({ title, time }) => ({
+		// 	title,
+		// 	time: Date(24 * 60 * 60 * 1000 * time)
+		// }))
+
+		const newData = await req('http://localhost:6969', 'json')
+
 		this.schedule = newData
 		console.log(newData)
 	}

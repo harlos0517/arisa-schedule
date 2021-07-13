@@ -30,8 +30,10 @@
 		<h1 class="text-center">Minamoto Arisa Streaming Schedule</h1>
 		<div v-if="schedule">
 			<div v-for="stream in schedule" style="margin-bottom: 1rem;">
-				<div><h3>{{ stream.title }}</h3></div>
-				<div>{{ stream.time.toLocaleString() }}</div>
+				<div><h3><a :href="'https://youtube.com/watch?v=' + stream.id">
+					{{ stream.title }}
+				</a></h3></div> 
+				<div>{{ stream.time }}</div>
 			</div>
 		</div>
 	</div>
