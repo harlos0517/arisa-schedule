@@ -63,7 +63,7 @@ let main = new Vue({
 		// 	time: Date(24 * 60 * 60 * 1000 * time)
 		// }))
 
-		const newData = await req('http://localhost:6969', 'json')
+		const newData = await req('http://157.230.32.225:6969', 'json')
 
 		this.schedule = newData
 		console.log(newData)
