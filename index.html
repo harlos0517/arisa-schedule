@@ -26,7 +26,7 @@
 </head>
 
 <body class="bg-dark text-light">
-	<img src="banner.jpg" width="100%" alt=" Banner">
+	<img src="banner.jpg" width="100%" alt="Banner">
 	<div id="main" class="p-5 container-lg">
 		<h1 class="text-center mb-5">Minamoto Arisa Streaming Schedule</h1>
 		<div v-if="schedule">
@@ -35,7 +35,7 @@
 					:href="'https://youtube.com/watch?v=' + stream.id"
 				>
 					<div class="col-md-4 thumbnail" style="background-color: black;">
-						<img class="img-fluid rounded-start p-3" :src="stream.thumbnail" alt=" Thumbnail" width="100%">
+						<img class="img-fluid rounded-start" :src="stream.thumbnail" alt="Thumbnail" width="100%">
 					</div>
 					<div class="col-md-8 detail card-body">
 						<h3 class="text-info card-title">{{ stream.title }}</h3> 

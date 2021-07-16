@@ -45,7 +45,7 @@ async function fetchDetails() {
 		return {
 			id: video.id,
 			title: video.snippet.title,
-			thumbnail: video.snippet.thumbnails.default.url,
+			thumbnail: video.snippet.thumbnails.medium.url,
 			time: video.liveStreamingDetails.scheduledStartTime,
 		}
 	})
