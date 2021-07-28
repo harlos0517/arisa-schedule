@@ -65,7 +65,7 @@ let main = new Vue({
 		// }))
 
 		const newData = await req('http://157.230.32.225:6969', 'json')
-
+		newData.sort((a, b) => (Date.parse(a.time) - Date.parse(b.time)))
 		this.schedule = newData
 		console.log(newData)
 	}
