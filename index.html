@@ -23,6 +23,8 @@
 	></script>
 	<!--VUE-->
 	<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+	<!--Moment-->
+	<script src="moment.js"></script>
 </head>
 
 <body class="bg-dark text-light">
@@ -39,7 +41,7 @@
 					</div>
 					<div class="col-md-8 detail card-body">
 						<h3 class="text-info card-title">{{ stream.title }}</h3> 
-						<p class="card-text">{{ (new Date(Date.parse(stream.time))).toLocaleString() }}</p>
+						<p class="card-text">{{ displayTime(stream.time) }}</p>
 					</div>
 				</a>
 			</div>

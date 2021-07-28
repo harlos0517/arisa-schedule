@@ -49,6 +49,7 @@ let main = new Vue({
 		schedule: null,
 	},
 	methods: {
+		displayTime: time => moment(new Date(Date.parse(time))).format('MMM D, YYYY h:mm A (ZZ)')
 	},
 	mounted: async function() {
 		// Nah this is not automated
