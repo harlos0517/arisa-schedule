@@ -39,7 +39,7 @@
 					</div>
 					<div class="col-md-8 detail card-body">
 						<h3 class="text-info card-title">{{ stream.title }}</h3> 
-						<p class="card-text">{{ Date(Date.parse(stream.time)).toLocaleString() }}</p>
+						<p class="card-text">{{ (new Date(Date.parse(stream.time))).toLocaleString() }}</p>
 					</div>
 				</a>
 			</div>
